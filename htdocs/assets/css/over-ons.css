@@ -1,0 +1,47 @@
+.about-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.banner {
+    margin-bottom: 2rem;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #2b2b2b;
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.info-text {
+    flex: 1 1 55%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a4a4a;
+}
+
+.info-image {
+    flex: 1 1 35%;
+}
+
+.team-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

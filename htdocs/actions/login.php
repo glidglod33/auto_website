@@ -8,7 +8,7 @@ $select_user->execute();
 $user = $select_user->fetch(PDO::FETCH_ASSOC);
 
 if (password_verify($_POST['password'], $user['password'])) {
-    $_SESSION['id'] = $user['id'];
+$_SESSION['user_id'] = $user['id']; // ✅ consistent with account-info.php
     $_SESSION['email'] = $user['email'];
     header('Location: /');
 }

@@ -13,9 +13,9 @@ if (accountImage) {
     });
 }
 
-const startButton = document.querySelector('.button-primary');
-if (startButton) {
-    startButton.addEventListener('click', function(e) {
+const openLoginModalBtn = document.getElementById('openLoginModal');
+if (openLoginModalBtn) {
+    openLoginModalBtn.addEventListener('click', function(e) {
         e.preventDefault();
         const modal = document.getElementById('loginModal');
         if (modal) modal.classList.remove('hidden');
@@ -33,6 +33,31 @@ if (modalClose) {
 const modal = document.getElementById('loginModal');
 if (modal) {
     modal.addEventListener('click', function (e) {
+        if (e.target === this) {
+            this.classList.add('hidden');
+        }
+    });
+}
+
+// hulp formulier 
+const openHelpModalBtn = document.getElementById('openHelpModal');
+if (openHelpModalBtn) {
+    openHelpModalBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const helpModal = document.getElementById('helpModal');
+        if (helpModal) helpModal.classList.remove('hidden');
+    });
+}
+
+const helpModal = document.getElementById('helpModal');
+if (helpModal) {
+    const closeBtn = helpModal.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            helpModal.classList.add('hidden');
+        });
+    }
+    helpModal.addEventListener('click', function (e) {
         if (e.target === this) {
             this.classList.add('hidden');
         }
